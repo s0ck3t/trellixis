@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use | VaultGuard by Trellixis</title>
+  <link rel="stylesheet" href="site.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="index.html"><span>Trellixis</span> · VaultGuard for Jira</a>
+      <nav class="nav">
+        <a href="index.html">Overview</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a class="active" href="terms.html">Terms of Use</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </header>
+
+    <article class="card">
+      <span class="badge">Effective: 16 November 2026</span>
+      <h1>Terms of Use (EULA)</h1>
+      <p>
+        These Terms of Use govern your installation and use of
+        <strong>VaultGuard Zero-Egress Compliance</strong>, provided by <strong>Trellixis</strong>
+        through the Atlassian Marketplace.
+      </p>
+
+      <h2>1. Licence &amp; Billing</h2>
+      <p>
+        VaultGuard is licensed and billed exclusively through Atlassian Marketplace
+        (Paid via Atlassian) in accordance with the Atlassian Marketplace Terms of Use. Evaluation
+        trials and active subscriptions apply per Atlassian Cloud site.
+      </p>
+
+      <h2>2. Automated Modification of Jira Content</h2>
+      <p>
+        When <strong>Auto-Clean</strong> mode is enabled, VaultGuard automatically modifies Jira
+        issue fields, comments, and eligible text attachments matching enabled built-in or custom
+        rules, and deletes original leaked attachments after uploading a sanitised
+        <code>REDACTED_</code> replacement. Administrators may switch to <strong>Monitor-Only</strong>
+        mode or configure allowlists and excluded projects at any time.
+      </p>
+
+      <h2>3. Customer Security Responsibilities</h2>
+      <ul>
+        <li>
+          <strong>Credential Rotation:</strong> Redacting an API key or password in Jira hides it
+          from current views, but does not revoke it at external providers. Customers remain
+          responsible for rotating exposed credentials.
+        </li>
+        <li>
+          <strong>Jira Changelog History:</strong> Because Atlassian Cloud does not permit
+          third-party apps to delete field changelog history, customers remain responsible for
+          restricting issue permissions or cloning and deleting tickets where strict history
+          removal is required.
+        </li>
+      </ul>
+
+      <h2>4. Disclaimer &amp; Limitation of Liability</h2>
+      <p>
+        VaultGuard uses deterministic patterns, check-digits, and admin-defined regular
+        expressions to reduce accidental exposure, but no automated scanner guarantees 100%
+        detection across all possible formats. To the maximum extent permitted by law, the app is
+        provided "as is" and Trellixis's aggregate liability shall not exceed the Marketplace
+        subscription fees paid by you for the app in the twelve months preceding the claim.
+      </p>
+
+      <h2>5. Contact</h2>
+      <p>
+        Questions regarding these terms may be directed to
+        <a href="mailto:jamestyas@gmail.com">jamestyas@gmail.com</a>.
+      </p>
+    </article>
+
+    <footer class="footer">
+      &copy; 2026 Trellixis. VaultGuard Zero-Egress Compliance.
+    </footer>
+  </div>
+</body>
+</html>

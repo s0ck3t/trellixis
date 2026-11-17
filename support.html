@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support &amp; Quick Guide | VaultGuard by Trellixis</title>
+  <link rel="stylesheet" href="site.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="index.html"><span>Trellixis</span> · VaultGuard for Jira</a>
+      <nav class="nav">
+        <a href="index.html">Overview</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a class="active" href="support.html">Support</a>
+      </nav>
+    </header>
+
+    <article class="card">
+      <span class="badge">Support Hours: Monday to Friday, 09:00–17:00 UK</span>
+      <h1>Documentation &amp; Support</h1>
+      <p>
+        Need help configuring VaultGuard in Jira Cloud or Jira Service Management? Reach
+        <strong>Trellixis Support</strong> directly at
+        <a href="mailto:jamestyas@gmail.com?subject=VaultGuard%20Support">jamestyas@gmail.com</a>.
+        We aim to respond to all support requests within 1 business day.
+      </p>
+
+      <h2>Quick Admin Setup</h2>
+      <ol>
+        <li>Open <strong>Jira Settings &rarr; Apps &rarr; VaultGuard Compliance Console</strong>.</li>
+        <li>Choose <strong>Auto-Clean</strong> (overwrites secrets automatically) or untick it for <strong>Monitor-Only</strong> testing.</li>
+        <li>Use <strong>3. Safe Lists</strong> to ignore internal company email domains or office VPN IP ranges.</li>
+        <li>Use <strong>4. Scan Existing Tickets</strong> to run a background JQL scan over older issues.</li>
+      </ol>
+
+      <h2>Frequently Asked Questions</h2>
+      <ul>
+        <li>
+          <strong>Does VaultGuard delete Jira Issue History?</strong> Comments and original
+          attachments are wiped cleanly, while Jira Cloud locks issue field changelogs against
+          all apps. For strict GDPR erasure on a field edit, clone the cleaned issue and delete
+          the original.
+        </li>
+        <li>
+          <strong>Why did a ticket not update?</strong> Check <strong>1. Rules &amp; Actions</strong>
+          to ensure Auto-Clean is ticked and the project is not listed under Projects to Skip.
+        </li>
+      </ul>
+    </article>
+
+    <footer class="footer">
+      &copy; 2026 Trellixis. VaultGuard Zero-Egress Compliance.
+    </footer>
+  </div>
+</body>
+</html>

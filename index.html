@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VaultGuard by Trellixis | Zero-Egress Jira Privacy &amp; Secret Protection</title>
+  <link rel="stylesheet" href="site.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="index.html"><span>Trellixis</span> · VaultGuard for Jira</a>
+      <nav class="nav">
+        <a class="active" href="index.html">Overview</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <span class="badge">Runs on Atlassian · Zero External Egress</span>
+      <h1>VaultGuard Zero-Egress Compliance for Jira Cloud</h1>
+      <p>
+        Built by <strong>Trellixis</strong>, VaultGuard automatically spots and redacts credit cards,
+        personal identifiers, passwords, and API keys inside Jira tickets, comments, Smart Links,
+        and uploaded config files, without sending a single byte outside Atlassian Cloud.
+      </p>
+
+      <div class="grid">
+        <div class="tile">
+          <strong>30 Built-In Detectors + Custom Rules</strong>
+          <p>
+            Covers payment cards (Luhn), IBANs (MOD-97), national &amp; healthcare IDs (SSN, NHS,
+            NINO, SIN, DNI/NIE, INSEE, Steuer-ID), Atlassian/AWS/GitHub/GitLab/Vault/Stripe/OpenAI
+            keys, and assigned <code>password=</code> / <code>?token=</code> secrets.
+          </p>
+        </div>
+        <div class="tile">
+          <strong>Jira-Wide Coverage</strong>
+          <p>
+            Scans Summary, Description, Environment, Smart Link URLs, Jira &amp; JSM comments,
+            custom text fields, and uploaded files (<code>.env.*</code>, <code>.pem</code>,
+            <code>.key</code>, <code>.ppk</code>, <code>.tfvars</code>, <code>.sh</code>,
+            <code>.log</code>, <code>.json</code>, <code>.csv</code>, <code>.yaml</code>).
+          </p>
+        </div>
+        <div class="tile">
+          <strong>Tamper-Evident Audit Log</strong>
+          <p>
+            Saves one-way SHA-256 receipts instead of raw secrets. Export CSV/JSON reports for
+            GDPR, HIPAA, DORA, PCI-DSS v4.0, ISO 27001, and SOC 2 audits, with built-in DSAR cleanup.
+          </p>
+        </div>
+      </div>
+
+      <a class="btn" href="support.html">Documentation &amp; Support</a>
+    </section>
+
+    <footer class="footer">
+      &copy; 2026 Trellixis. VaultGuard runs 100% inside Atlassian Forge.
+    </footer>
+  </div>
+</body>
+</html>

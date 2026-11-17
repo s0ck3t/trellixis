@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | VaultGuard by Trellixis</title>
+  <link rel="stylesheet" href="site.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="index.html"><span>Trellixis</span> · VaultGuard for Jira</a>
+      <nav class="nav">
+        <a href="index.html">Overview</a>
+        <a class="active" href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </header>
+
+    <article class="card">
+      <span class="badge">Last Updated: 16 November 2026</span>
+      <h1>Privacy Policy</h1>
+      <p>
+        This Privacy Policy explains how <strong>Trellixis</strong> handles data within
+        <strong>VaultGuard Zero-Egress Compliance</strong> for Jira Cloud and Jira Service Management.
+      </p>
+
+      <h2>1. Zero External Egress Architecture</h2>
+      <p>
+        VaultGuard is built natively on Atlassian Forge and qualifies for the
+        <strong>Runs on Atlassian</strong> programme. Its manifest declares empty external fetch
+        permissions (<code>permissions.external.fetch.backend: []</code> and
+        <code>client: []</code>). Ticket content, comments, attachments, and customer data never
+        leave Atlassian's managed cloud infrastructure and are never transmitted to Trellixis
+        servers or third-party AI services.
+      </p>
+
+      <h2>2. What Data VaultGuard Processes</h2>
+      <ul>
+        <li>
+          <strong>In-Memory Scanning:</strong> Issue summaries, descriptions, environments,
+          configured or auto-discovered custom fields, comments, and eligible text attachments are
+          inspected purely in transient memory within Atlassian Forge compute.
+        </li>
+        <li>
+          <strong>No Plaintext Secrets Stored:</strong> VaultGuard never persists raw passwords,
+          API keys, card numbers, or personal identifiers. Each redaction writes only a one-way,
+          tenant-salted 12-character SHA-256 fingerprint (for example,
+          <code>[REDACTED_AWS_ACCESS_KEY_SHA256:9f86d081884c]</code>).
+        </li>
+        <li>
+          <strong>Audit &amp; Policy Storage:</strong> Configuration settings, custom rules,
+          allowlists, and tamper-evident audit receipts (containing issue key, project key,
+          rule ID, category, timestamp, actor account ID, and SHA-256 receipt hash) are stored
+          exclusively in Atlassian Forge Hosted Storage (<code>storage:app</code>) within your
+          Atlassian site boundary.
+        </li>
+      </ul>
+
+      <h2>3. Data Retention &amp; GDPR Right to Erasure (DSAR)</h2>
+      <p>
+        Jira Administrators can configure an Audit Retention Window in the Admin Console and run
+        1-click DSAR cleanup to anonymise historical issue keys, actor IDs, and receipt metadata
+        older than their chosen cutoff date while preserving cryptographic hash-chain verification.
+        Uninstalling VaultGuard removes access to app storage according to Atlassian Forge
+        lifecycle policies.
+      </p>
+
+      <h2>4. Jira Cloud Issue History Limitation</h2>
+      <p>
+        For attachments and comments, VaultGuard deletes leaked source files and overwrites comment
+        bodies in place. For standard Jira issue fields (such as Description or Summary), Jira Cloud
+        maintains an immutable issue changelog that Atlassian does not allow any Marketplace app to
+        edit or delete via API. Admins are advised to rotate exposed secrets and clone/delete the
+        original ticket if strict field-history erasure is required.
+      </p>
+
+      <h2>5. Contact</h2>
+      <p>
+        For privacy enquiries or data protection questions, please contact Trellixis via our
+        <a href="support.html">Support page</a> or email
+        <a href="mailto:jamestyas@gmail.com">jamestyas@gmail.com</a>.
+      </p>
+    </article>
+
+    <footer class="footer">
+      &copy; 2026 Trellixis. VaultGuard Zero-Egress Compliance.
+    </footer>
+  </div>
+</body>
+</html>
